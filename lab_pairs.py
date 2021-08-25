@@ -20,7 +20,7 @@ while present_students != []:
         pairings[-1].append(last_pair)
         present_students.remove(last_pair)
 
-
+# test push
 for idx, pair in enumerate(pairings):
     if len(pair) == 2:
         print(f'{rooms[idx]} -- {pair[0]} & {pair[1]}')
