@@ -2,7 +2,7 @@ from random import choice
 
 all_students = []
 
-present_students = ['Ashley', 'Shauna', 'Kat', "Anjelica", 'Pat']
+present_students = []
 
 rooms = ["Malala A", "Malala B", "Malala C", "Ruth A", "Ruth B", "Ruth C"]
 
