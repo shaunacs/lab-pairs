@@ -1,10 +1,7 @@
 from random import choice
+from students import all_students, present_students
 
-all_students = []
-
-present_students = []
-
-rooms = ["Malala A", "Malala B", "Malala C", "Ruth A", "Ruth B", "Ruth C"]
+rooms = ["Malala A", "Malala B", "Malala C", "Malala D", "Malala E", "Malala F", "Ruth A", "Ruth B", "Ruth C"]
 
 
 def make_lab_pairs(students, rooms):
@@ -29,3 +26,41 @@ def make_lab_pairs(students, rooms):
             print(f'{rooms[idx]} -- {pair[0]} & {pair[1]}')
         elif len(pair) == 3:
             print(f'{rooms[idx]} -- {pair[0]}, {pair[1]} & {pair[2]}')
+
+
+def make_random_student_list(students):
+    """Shuffles list of students"""
+
+    shuffled_students = []
+
+    while students != []:
+        student_to_add = choice(students)
+        shuffled_students.append(student_to_add)
+        students.remove(student_to_add)
+    
+    return shuffled_students
+
+
+def make_whiteboarding_groups(students):
+
+    kat = []
+    anjelica = []
+    shauna = []
+
+    while students != []:
+        if len(kat) <= 4:
+            student = choice(students)
+            kat.append(student)
+            students.remove(student)
+        elif len(anjelica) <= 4:
+            student = choice(students)
+            anjelica.append(student)
+            students.remove(student)
+        else:
+            student = choice(students)
+            shauna.append(student)
+            students.remove(student)
+
+    print(", ".join(kat))
+    print(", ".join(anjelica))
+    print(", ".join(shauna))
