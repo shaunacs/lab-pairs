@@ -43,24 +43,31 @@ def make_random_student_list(students):
 
 def make_whiteboarding_groups(students):
 
-    kat = []
-    anjelica = []
-    shauna = []
+    malala_a = []
+    malala_b = []
+    malala_c = []
+    malala_d = []
+
 
     while students != []:
-        if len(kat) <= 4:
+        if len(malala_a) <= 3:
             student = choice(students)
-            kat.append(student)
+            malala_a.append(student)
             students.remove(student)
-        elif len(anjelica) <= 4:
+        elif len(malala_b) <= 2:
             student = choice(students)
-            anjelica.append(student)
+            malala_b.append(student)
+            students.remove(student)
+        elif len(malala_c) <= 2:
+            student = choice(students)
+            malala_c.append(student)
             students.remove(student)
         else:
             student = choice(students)
-            shauna.append(student)
+            malala_d.append(student)
             students.remove(student)
 
-    print(", ".join(kat))
-    print(", ".join(anjelica))
-    print(", ".join(shauna))
+    print(", ".join(malala_a))
+    print(", ".join(malala_b))
+    print(", ".join(malala_c))
+    print(", ".join(malala_d))
